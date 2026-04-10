@@ -28,16 +28,31 @@ class ExpenseTrackerApp {
     }
 
     initializeDefaultData() {
+        // Updated categories
         this.categories = [
-            { id: 1, name: 'Food & Dining', icon: '🍽️', desc: 'Restaurants and groceries' },
-            { id: 2, name: 'Shopping', icon: '🛍️', desc: 'Clothing and accessories' },
-            { id: 3, name: 'Travel', icon: '✈️', desc: 'Transportation and trips' },
-            { id: 4, name: 'Entertainment', icon: '🎬', desc: 'Movies, games, events' },
-            { id: 5, name: 'Utilities', icon: '💡', desc: 'Bills and services' },
-            { id: 6, name: 'Salary', icon: '💼', desc: 'Income from work' }
+            { id: 1,  name: 'Groceries',     icon: '🛒', desc: 'Supermarket and food shopping' },
+            { id: 2,  name: 'Restaurants',   icon: '🍽️', desc: 'Eating out, deliveries' },
+            { id: 3,  name: 'Shopping',      icon: '🛍️', desc: 'Clothes, electronics, other shopping' },
+            { id: 4,  name: 'Travel',        icon: '✈️', desc: 'Transport, trips, holidays' },
+            { id: 5,  name: 'Entertainment', icon: '🎭', desc: 'Movies, games, subscriptions, going out' },
+            { id: 6,  name: 'Loans',         icon: '💳', desc: 'Loan payments, credit installments' },
+            { id: 7,  name: 'Salary',        icon: '💼', desc: 'Income from work' },
+            { id: 8,  name: 'Utilities',     icon: '💡', desc: 'Electricity, gas, internet, phone' },
+            { id: 9,  name: 'Beauty',        icon: '💄', desc: 'Cosmetics, hair, grooming' },
+            { id: 10, name: 'Health',        icon: '🩺', desc: 'Medical, pharmacy, insurance' },
+            { id: 11, name: 'Sport',         icon: '🏋️', desc: 'Gym, sports, equipment' },
+            { id: 12, name: 'Savings',       icon: '🏦', desc: 'Money moved into savings' }
         ];
 
-        this.accounts = [];
+        // Pre-loaded accounts
+        this.accounts = [
+            { id: 1, name: 'Edenred',     type: 'Credit Card', balance: 0 },
+            { id: 2, name: 'Trading 212', type: 'Investment',  balance: 0 },
+            { id: 3, name: 'Cash',        type: 'Cash',        balance: 0 },
+            { id: 4, name: 'BCR',         type: 'Checking',    balance: 0 },
+            { id: 5, name: 'Revolut',     type: 'Checking',    balance: 0 }
+        ];
+
         this.saveData();
     }
 
